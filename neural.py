@@ -3,6 +3,7 @@
 from typing import List, Tuple, Any
 
 from utilities import *
+from neural import *
 
 # Arrays are represented as lists of (equal-sized) lists. Packages like numpy could
 # speed up computation if needed
