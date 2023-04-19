@@ -9,7 +9,7 @@ sq_training_data = [
     ([0.1], [0.01]),
     ([.9], [.81])
 ]
-sqn = NeuralNet(1, 30, 1)
+sqn = NeuralNet(1, 20, 1)
 sqn.train(sq_training_data)
 
 print()
