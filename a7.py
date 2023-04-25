@@ -33,12 +33,17 @@ xorn = NeuralNet(2, 2, 1)
 xorn.train(x_or_trainingdata)
 
 print()
-
+print('Test 1')
 print(xorn.test_with_expected(x_or_trainingdata))
 
 print()
+print('Test 2')
 xorn1 = NeuralNet(2, 8, 1)
 print(xorn1.test_with_expected(x_or_trainingdata))
+print()
+print('Test3')
+xorn2 = NeuralNet(2, 1, 1)
+print(xorn2.test_with_expected(x_or_trainingdata))
 print()
 print("\n\nTraining voter opinion\n\n")
 
