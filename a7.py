@@ -28,7 +28,7 @@ x_or_trainingdata = [
     ([1, 1], [0])
 ]
 
-xorn = NeuralNet(2, 20, 1)
+xorn = NeuralNet(2, 2, 1)
 
 xorn.train(x_or_trainingdata)
 
@@ -36,6 +36,10 @@ print()
 
 print(xorn.test_with_expected(x_or_trainingdata))
 
+print()
+xorn1 = NeuralNet(2, 8, 1)
+print(xorn1.test_with_expected(x_or_trainingdata))
+print()
 print("\n\nTraining voter opinion\n\n")
 
 voter_opinion_data = [
@@ -52,7 +56,7 @@ von = NeuralNet(5, 6, 1)
 von.train(voter_opinion_data)
 
 print(von.test_with_expected(voter_opinion_data))
-
+print()
 test_data = [
     [1, 1, 1, .1, .1],
     [.5, .2, .1, .7, .7],
