@@ -17,7 +17,7 @@ def parse_line(line: str) -> Tuple[List[float], List[float]]:
     output = [0 if out == "neutral or dissatisfied" else 1]
     print(output)
 
-    inpt = [float(x) for x in tokens[7:24]]
+    inpt = [float(x) for x in tokens[6:7] and tokens[7:24]]
     print(inpt)
     return (inpt, output)
 
@@ -51,7 +51,7 @@ with open("train.csv", "r") as f:
 td = normalize(training_data)
 for line in training_data:
      print(line)
-train_data, test_data = train_test_split(td, test_size=.8)
+train_data, test_data = train_test_split(td, test_size=.9)
 print(len(train_data))
 print(len(test_data))
 for line in td:
