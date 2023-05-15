@@ -50,12 +50,12 @@ with open("train.csv", "r") as f:
 td = normalize(training_data)
 for line in training_data:
      print(line)
-train_data, test_data = train_test_split(td, test_size=.8)
+train_data, test_data = train_test_split(td, test_size=.15)
 print(len(train_data))
 print(len(test_data))
 for line in td:
     print(line)
-nn = NeuralNet(17, 1, 1)
+nn = NeuralNet(17, 5, 1)
 nn.train(train_data, learning_rate=.5)
 for i in nn.test_with_expected(test_data):
     print(f"desired: {i[1]}, actual: {i[2]}")
